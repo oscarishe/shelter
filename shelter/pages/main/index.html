@@ -8,17 +8,18 @@
 </head>
 <body>
 	<div class="wrapper">
+		
 		<div class="start_screen">
 		<header>
 			<div class="logo">
-				<div class="logo_title">Cozy House</div>
+				<div class="logo_title"><h1>Cozy House</h1></div>
 				<div class="logo_subtitle">Shelter for pets in Boston</div>
 			</div>
 			<nav>
-				<div class="link_active">About the shelter</div>
-				<div class="link">Our pets</div>
-				<div class="link">Help the shelter</div>
-				<div class="link">Contacts</div>
+				<div class="link_active"><a>About the shelter</a></div>
+				<div class="link"><a href="#pets">Our pets</a></div>
+				<div class="link"><a href="#help">Help the shelter</a></div>
+				<div class="link"><a href="#contacts">Contacts</a></div>
 			</nav>
 			</header>
 			<div class="start_screen_content">
@@ -32,13 +33,12 @@
 						</p>
 					</div>
 					<div class="start_screen_content_button">
-						<button>Make a friend</button>
+						<a href="#pets">Make a friend</a>
 					</div>
 
 				</div>
 				<div class="start_screen_content_image"></div>
 			</div>
-		
 		</div>
 		<div class="about">
 			<div class="about_container">
@@ -58,14 +58,14 @@
 			</div>
 		</div>
 		</div>
-		<div class="pets">
+		<div class="pets" id="pets">
 			<div class="pets_container">
 				<div class="pets_header">
 					<h3> Our friends who <br>
 					are looking for a house</h3>
 				</div>
 				<div class="pets_items_container">
-					<div class="pets_arrow_left"></div>
+					<div class="pets_arrow pets_arrow_left"></div>
 					<div class="pets_card">
 						<div class="card_image">
 
@@ -101,14 +101,14 @@
 							Learn more
 						</div>
 					</div>
-					<div class="pets_arrow_right"></div>
+					<div class="pets_arrow pets_arrow_right"></div>
 				</div>
 				<div class="pets_button">
-					Get to know the rest
+					<a>Get to know the rest</a>
 				</div>
 			</div>
 		</div>
-		<div class="help">
+		<div class="help" id="help">
 			<div class="help_container">
 				<div class="help_header">
 					<h3>How you can help
@@ -192,6 +192,54 @@
 				</div>
 			</div>
 		</div>
+		<div class="donation">
+			<div class="donation_container">
+				<div class="donation_image">
+					
+				</div>
+				<div class="donation_content">
+					<div class="donation_header">
+						<h3>
+							You can also make a donation
+						</h3>
+					</div>
+					<div class="donation_card_info">
+						Name of the bank / Type of bank account
+					</div>
+					<div class="donation_card_number">
+						<a href=" ">8380 2880 8028 8791 7435</a>
+					</div>
+					<div class="donation_card_text">
+						Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="contacts">
+			<div class="footer_container">
+				<div class="footer_contacts">
+					<h3>
+						For questions and suggestions
+					</h3>
+					<div class="footer_email">
+						<h4><a href="mailto:email@shelter.com">email@shelter.com</a></h4>
+					</div>
+					<div class="footer_number">
+						<h4><a href="tel:+13 674 567 75 54">+13 674 567 75 54</a></h4>
+					</div>
+				</div>
+				<div class="footer_address">
+					<h3>We are waiting for your visit</h3>
+					<div class="footer_address_item">
+						<h4><a href="https://goo.gl/maps/Z2pHpHdydbwZhZcq8" target="_blank">1 Central Street, Boston (entrance from the store) </a><h4>
+					</div>
+					<div class="footer_address_item">
+						<h4><a href="https://goo.gl/maps/Lpn63HPoTVjH6YgJ6"  target="_blank"> 18 South Park, London </a></h4>
+					</div>
+				</div>
+				<div class="footer_image"></div>
+			</div>
+		</footer>
 	</div>
 </body>
 </html>
