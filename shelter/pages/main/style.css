@@ -235,7 +235,7 @@ nav div a {
 .pets_card {
 	height: 435px;
 	width: 270px;
-	background: white;
+	background: #FAFAFA;
 	border-radius: 10px;
 	margin: 0 45px;
 }
@@ -259,6 +259,7 @@ nav div a {
 }
 .pets_arrow:hover {
 	border: 3px solid greenyellow;
+	cursor: pointer;
 }
 .pets_arrow_left {
 	background: url(../../assets/images/Arrow.svg) 50% no-repeat;
