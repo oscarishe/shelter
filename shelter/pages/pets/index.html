@@ -2,14 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 	<title></title>
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header_sticky">
+
 		<header>
 			<div class="logo">
 			<a href="../main/index.html">
@@ -17,14 +17,30 @@
 				<div class="logo_subtitle">Shelter for pets in Boston</div>
 			</a>
 			</div>
-			<nav>
+			<nav class="active_menu">
 				<div class="link"><a href="../main/index.html">About the shelter</a></div>
 				<div class="link_active"><a href="#pets">Our pets</a></div>
 				<div class="link"><a href="../main/index.html#help">Help the shelter</a></div>
 				<div class="link"><a href="#contacts">Contacts</a></div>
 			</nav>
-			</header>
+			<div class="burger">
+				<span id="burger" class="burger_hidden"></span>
 			</div>
+			<nav class="hidden_menu">
+				<div class="logo">
+			<a href="../main/index.html">
+				<div class="logo_title"><h1>Cozy House</h1></div>
+				<div class="logo_subtitle">Shelter for pets in Boston</div>
+			</a>
+			</div>
+				<div class="hidden_menu_container">
+				<div class="link"><a href="../main/index.html">About the shelter</a></div>
+				<div class="link link_active"><a href="#pets">Our pets</a></div>
+				<div class="link"><a href="../main/index.html#help">Help the shelter</a></div>
+				<div class="link"><a href="#contacts" onclick="closeBurgerMenu()">Contacts</a></div>
+				</div>
+			</nav>
+			</header>
 			<div class="pets">
 				<div class="pets_container">
 					<h3>Our friends who<br>
