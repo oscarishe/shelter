@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=1280">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 	<link rel="stylesheet" href="style.css">
 	<title></title>
 </head>
@@ -17,11 +17,28 @@
 				<div class="logo_subtitle">Shelter for pets in Boston</div>
 				</a>
 			</div>
-			<nav>
+			<nav class="active_menu">
 				<div class="link_active"><a>About the shelter</a></div>
 				<div class="link"><a href="../pets/index.html">Our pets</a></div>
 				<div class="link"><a href="#help">Help the shelter</a></div>
 				<div class="link"><a href="#contacts">Contacts</a></div>
+			</nav>
+			<div class="burger">
+				<span id="burger" class="burger_hidden"></span>
+			</div>
+			<nav class="hidden_menu">
+				<div class="logo">
+			<a href="../main/index.html">
+				<div class="logo_title"><h1>Cozy House</h1></div>
+				<div class="logo_subtitle">Shelter for pets in Boston</div>
+			</a>
+			</div>
+				<div class="hidden_menu_container">
+				<div class="link"><a href="../main/index.html">About the shelter</a></div>
+				<div class="link link_active"><a href="#pets">Our pets</a></div>
+				<div class="link"><a href="../main/index.html#help">Help the shelter</a></div>
+				<div class="link"><a href="#contacts" onclick="closeBurgerMenu()">Contacts</a></div>
+				</div>
 			</nav>
 			</header>
 			<div class="start_screen_content">
