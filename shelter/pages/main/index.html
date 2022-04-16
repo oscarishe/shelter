@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 	<title></title>
 </head>
 <body>
@@ -34,9 +35,9 @@
 			</a>
 			</div>
 				<div class="hidden_menu_container">
-				<div class="link"><a href="../main/index.html">About the shelter</a></div>
-				<div class="link link_active"><a href="#pets">Our pets</a></div>
-				<div class="link"><a href="../main/index.html#help">Help the shelter</a></div>
+				<div class="link link_active"><a href="../main/index.html">About the shelter</a></div>
+				<div class="link"><a href="#pets" onclick="closeBurgerMenu()">Our pets</a></div>
+				<div class="link"><a href="../main/index.html#help" onclick="closeBurgerMenu()">Help the shelter</a></div>
 				<div class="link"><a href="#contacts" onclick="closeBurgerMenu()">Contacts</a></div>
 				</div>
 			</nav>
@@ -153,7 +154,7 @@
 							<img src="../../assets/images/icon-toys.svg">
 						</div>
 						<div class="help_card_text">
-							<h4> Toys</h4>
+							<h4>Toys</h4>
 						</div>
 					</div>
 					<div class="help_card">

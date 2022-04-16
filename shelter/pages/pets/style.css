@@ -115,11 +115,14 @@ nav .link_active a {
 .hidden_menu .logo {
 	margin: 30px 0px 0px 10px;
 }
-.hidden_menu .logo .logo_title h1, .hidden_menu .logo .logo_subtitle{
+.hidden_menu .logo .logo_subtitle{
 	color: white;
+} 
+.hidden_menu .logo .logo_title h1 { 
+color: #F1CDB3;
 }
 .hidden_menu_container {
-	margin-top: 248px;
+	margin-top: 160px;
 }
 .hidden_menu .link a {
 	font-family: 'Arial';
@@ -157,19 +160,19 @@ nav .link_active a {
 .burger_active {
 	position: relative;
     display: block;
-    width: 26px;
+    width: 20px;
     height: 30px;
-    margin: 19px 45px 0 auto;
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
+    margin: 15px 45px 0 auto;
+    border-left: 2px solid #F1CDB3;
+    border-right: 2px solid #F1CDB3;
 }
 .burger_active:before {
 	content: "";
     position: absolute;
     top: 0px;
-    left: 12px;
+    left: 9px;
     height: 100%;
-    border-left: 2px solid #000000;
+    border-left: 2px solid #F1CDB3;
 }
 
 .pets {
@@ -212,8 +215,7 @@ nav .link_active a {
 
 }
 .pets_card:hover {
-	box-shadow: 0px 5px 10px 2px aquamarine;
-	background: aquamarine;
+	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 	cursor: pointer;
 }
 .pets_button {
@@ -233,9 +235,8 @@ nav .link_active a {
 	transition: 0.5s;
 }
 .pets_button:hover {
-	background: greenyellow;
+	background: #FDDCC4;
 	border: none;
-	transform: scale(1.3);
 }
 .card_image {
 	width: 270px;
@@ -284,7 +285,7 @@ nav .link_active a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 151px;
+	width: 152px;
 	padding: 13px 15px;
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
@@ -301,7 +302,6 @@ nav .link_active a {
 .pets_card:hover .card_button {
 	background: #FDDCC4;
 	border: none;
-	transform: scale(1.3);
 }
 .pagination_container {
 	width: 340px;
@@ -358,7 +358,7 @@ footer h3 {
 	line-height: 45px;
 	letter-spacing: 0.06em;
 	color: #FFFFFF;
-	margin-top: 15px;
+	margin-top: 16px;
 }
 .footer_contacts {
 	width: 279px;
@@ -437,15 +437,15 @@ footer h4 {
 		margin-top: 40px;
 	}
 	footer {
-		padding: 17px 20px 0 20px;
+		padding: 15px 20px 0 20px;
 
 	}
 	.footer_container {
 		margin: 0 auto;
 		max-width: 728px;
 		justify-content: center;
-		column-gap: 55px;
-		row-gap: 20px;
+		column-gap: 60px;
+		row-gap: 25px;
 
 	}
 	.pets {
@@ -461,6 +461,9 @@ footer h4 {
 	}
 	nav {
 		display: none;
+	}
+	#burger {
+		margin-right: 45px;
 	}
 	.pets_card {
 		margin: auto;
@@ -497,6 +500,7 @@ footer h4 {
 		font-size: 25px;
 		line-height: 32px;
 		text-align: center;
+		margin-top: 15px;
 	}
 	footer {
 		padding: 17px 10px 0 10px;

@@ -97,6 +97,7 @@ nav {
 }
 
 .hidden_menu {
+	margin-top: 0px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -110,11 +111,9 @@ nav {
 .hidden_menu .logo {
 	margin: 30px 0px 0px 10px;
 }
-.hidden_menu .logo .logo_title h1, .hidden_menu .logo .logo_subtitle{
-	color: white;
-}
+
 .hidden_menu_container {
-	margin-top: 248px;
+	margin-top: 160px;
 }
 .hidden_menu .link a {
 	font-family: 'Arial';
@@ -150,21 +149,23 @@ nav {
      border-top: 2px solid #F1CDB3;
 }
 .burger_active {
+	top: 0px;
+	left: 0px;
 	position: relative;
     display: block;
-    width: 26px;
+    width: 20px;
     height: 30px;
-    margin: 19px 45px 0 auto;
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
+    margin: 15px 50px 0 0;
+    border-left: 2px solid #F1CDB3;
+    border-right: 2px solid #F1CDB3;
 }
 .burger_active:before {
 	content: "";
     position: absolute;
     top: 0px;
-    left: 12px;
+    left: 9px;
     height: 100%;
-    border-left: 2px solid #000000;
+    border-left: 2px solid #F1CDB3;
 }
 
 .start_screen_content {
@@ -245,7 +246,7 @@ nav {
 .about_container {
 	display: flex;
 	justify-content: center;
-	column-gap: 115px;
+	column-gap: 120px;
 	width: 1200px;
 	height: 408px;
 }
@@ -321,8 +322,7 @@ nav {
 	margin: 0 45px;
 }
 .pets_card:hover {
-	box-shadow: 0px 5px 10px 2px aquamarine;
-	background: aquamarine;
+	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 	cursor: pointer;
 }
 .pets_arrow_left, .pets_arrow_right {
@@ -373,7 +373,6 @@ nav {
 .pets_button:hover {
 	background: #FDDCC4;
 	border: none;
-	transform: scale(1.3);
 }
 .card_image {
 	width: 270px;
@@ -406,7 +405,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 151px;
+	width: 152px;
 	padding: 13px 15px;
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
@@ -520,7 +519,7 @@ nav {
 }
 .donation_card_number {
 	margin-bottom: 20px;
-	padding: 10px 15px 10px 60px;
+	padding: 10px 10px 10px 60px;
 	width: 279px;
 	height: 23px;
 	background: #F1CDB3;
@@ -536,7 +535,6 @@ nav {
 }
 .donation_card_number:hover {
 	background-color: #FDDCC4;
-	transform: scale(1.2);
 }
 .donation_card_number a {
 	text-decoration: none;
@@ -572,7 +570,7 @@ footer h3 {
 	line-height: 45px;
 	letter-spacing: 0.06em;
 	color: #FFFFFF;
-	margin-top: 15px;
+	margin-top: 16px;
 }
 .footer_contacts {
 	width: 279px;
@@ -724,15 +722,15 @@ footer h4 {
 		row-gap: 60px;
 	}
 	footer {
-		padding: 17px 20px 0 20px;
+		padding: 15px 20px 0 20px;
 
 	}
 	.footer_container {
 		margin: 0 auto;
 		max-width: 728px;
 		justify-content: center;
-		column-gap: 55px;
-		row-gap: 20px;
+		column-gap: 60px;
+		row-gap: 25px;
 
 	}
 }
@@ -748,7 +746,7 @@ footer h4 {
 		display: block;
 	}
 	#burger {
-		margin-right: 44px;
+		margin-right: 45px;
 	}
 	.start_screen_content {
 		height: 702px;
@@ -851,7 +849,7 @@ footer h4 {
 		line-height: 32px;
 	}
 	.help {
-		padding: 30px 0px 80px 0px;
+		padding: 30px 0px 50px 0px;
 	}
 	.help_card {
 		width: 130px;
@@ -874,13 +872,101 @@ footer h4 {
 		margin-top: 19px;
 	}
 	.donation {
-		padding: 45px 10px 100px 10px;
+		padding: 40px 10px 42px 10px;
 	}
 	.donation_container {
 		width: 300px;
 		margin: auto;
+		row-gap: 40px;
+
 	}
-	.donation_header{
+	.donation_content {
+		margin: auto;
+	}
+	.donation_header {
+		margin: 0 23px;
+		width: 257px;
+	}
+	.donation_header h3{
+		margin: auto;
+		display: block;
+		text-align: center;
+		width: 220px;
+		font-size: 25px;
+		line-height: 32px;
+	}
+	.donation_card_info {
+		margin: 25px 15px 25px 15px;
+		width: 285px;
+		letter-spacing: 0;
+	}
+	.donation_card_number {
+		margin: 0 10px 20px 10px;
+		vertical-align: middle;
+		margin-bottom: 20px;
+		padding: 10px 0px 10px 60px;
+		width: 220px;
+		height: 23px;
+		background: #F1CDB3;
+		border-radius: 9px;
+		font-family: 'Georgia';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 17px;
+		letter-spacing: 0.06em;
+		background: url(../../assets/images/credit-card.svg) no-repeat #F1CDB3 5% 50%;
+		transition: transform 0.5s;
+	}
+	.donation_card_text {
+		width: 280px;
+		height: 90px;
+		text-align: justify;
+		margin: 0 10px;
+	}
+	.donation_image {
+		margin: auto;
+		width: 260px;
+		height: 135px;
+		background-size: 100%;
+	}
+	footer h3 {
+		font-size: 25px;
+		line-height: 32px;
+		text-align: center;
+	}
+	footer {
+		padding: 17px 10px 0 10px;
+	}
+	.footer_container {
+
 		width: 300px;
+		row-gap: 20px;
+	}
+	.footer_email {
+		margin: 42px 0 0 10px;
+		background-position: 2% 50%;
+	}
+	.footer_email h4 {
+		width: 192px;
+	}
+	.footer_number {
+		margin: 42px 0 0 15px;
+		background-position: 2% 50%;
+	}
+	.footer_address h3 {
+		font-size: 25px;
+		line-height: 32px;
+		text-align: center;
+		margin: 15px auto -5px auto;
+	}
+	.footer_address_item {
+		margin-top: 45px;
+		margin-bottom: 15px;
+	}
+	.footer_image {
+		width: 260px;
+		height: 269px;
+		background-size: 260px 269px;
 	}
 }
