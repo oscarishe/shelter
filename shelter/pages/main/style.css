@@ -706,10 +706,10 @@ footer h4 {
 	.help_items {
 		width: 630px;
 		column-gap: 60px;
-		row-gap: 25px;
+		row-gap: 26px;
 	}
 	.donation {
-		padding: 45px 100px 100px 100px;
+		padding: 45px 100px 97px 100px;
 	}
 	.donation_content {
 		margin-left: 62px;
@@ -936,7 +936,7 @@ footer h4 {
 		text-align: center;
 	}
 	footer {
-		padding: 17px 10px 0 10px;
+		padding: 15px 10px 0 10px;
 	}
 	.footer_container {
 
