@@ -92,10 +92,12 @@ nav {
 	color: #FAFAFA;
 	padding-bottom: 4px;
 }
-.link:hover {
+.active_menu .link:hover {
 	border-bottom: 3px solid #F1CDB3;
 }
-
+.hidden_menu .link a:hover {
+	border-bottom: 3px solid #F1CDB3;
+}
 .hidden_menu {
 	margin-top: 0px;
 	position: absolute;
@@ -126,6 +128,9 @@ nav {
 .hidden_menu .link {
 	margin-bottom: 40px;
 	text-align: center;
+}
+.hidden_menu .link_active a{
+	color: #FAFAFA;
 }
 .burger {
 	z-index: 2;

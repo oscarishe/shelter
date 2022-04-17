@@ -99,9 +99,14 @@ nav .link_active a {
 	order: 0;
 	flex-grow: 0;
 }
-.link:hover {
+.active_menu .link:hover {
 	border-bottom: 3px solid #F1CDB3;
 }
+.hidden_menu .link a:hover {
+	border-bottom: 3px solid #F1CDB3;
+}
+
+
 .hidden_menu {
 	position: absolute;
 	right: 0;
@@ -131,6 +136,9 @@ color: #F1CDB3;
 	font-size: 32px;
 	line-height: 160%;
 	color: #CDCDCD;
+}
+.hidden_menu .link_active a {
+	color: #FAFAFA;
 }
 .hidden_menu .link {
 	margin-bottom: 40px;
