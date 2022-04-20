@@ -8,6 +8,8 @@
 	<title></title>
 </head>
 <body>
+	<div id="hidden_menu_field" class="hidden_menu_field" onclick="closeBurgerMenu()">
+			</div>
 	<div class="wrapper">
 
 		<header>
@@ -45,95 +47,8 @@
 				<div class="pets_container">
 					<h3>Our friends who<br>
 are looking for a house</h3>
-				<div class="pets_items_container">
-					<div class="pets_card">
-						<div class="card_image">
-
-						</div>
-						<div class="card_name">
-							Katrine
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Jennifer
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Woody
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-
-						</div>
-						<div class="card_name">
-							Sophia
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Timmy
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Charly
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-
-						</div>
-						<div class="card_name">
-							Scarlett
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Freddie
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
+				<div class="pets_items_container" id="pets_items_container">
+					
 					
 				</div>
 				<div class="pagination_container">
@@ -171,5 +86,40 @@ are looking for a house</h3>
 			</div>
 			</footer>
 	</div>
+	<div class="popup" id="popup">
+		<a onclick="closePopup()" class="popup_area"></a>
+		<div class="popup_container">
+			<div class="popup_content">
+				<a onclick="closePopup()">
+				<div class="popup_close_button"></div>
+				</a>
+				
+				<div class="popup_info"> 
+					<div class="popup_image" id="popup_image"></div>
+					<div class="popup_text">
+						<div class="popup_pet_name" id="popup_pet_name">
+							
+						</div>
+						<div class="popup_pet_type" id="popup_pet_type">
+							<h4>Dog - Labrador</h4>
+						</div>
+						<div class="popup_pet_description" id='popup_pet_description'>
+							
+						</div>
+						<div class="popup_pet_list" id="popup_pet_list">
+							<ul>
+								<li><b>Age</b>: 2 months</li>
+								<li><b>Inoculations</b>: none</li>
+								<li><b>Diseases</b>: none</li>
+								<li><b>Parasites</b>: none</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
 </body>
 </html>

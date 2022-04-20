@@ -8,11 +8,13 @@
 	<title></title>
 </head>
 <body>
+	<div id="hidden_menu_field" class="hidden_menu_field" onclick="closeBurgerMenu()">
+			</div>
 	<div class="wrapper">
 		
 		<div class="start_screen">
 		<header>
-			<div class="logo">
+			<div class="logo" id="logotype">
 				<a href="index.html">
 				<div class="logo_title"><h1>Cozy House</h1></div>
 				<div class="logo_subtitle">Shelter for pets in Boston</div>
@@ -33,7 +35,7 @@
 				<div class="logo_title"><h1>Cozy House</h1></div>
 				<div class="logo_subtitle">Shelter for pets in Boston</div>
 			</a>
-			</div>
+				</div>
 				<div class="hidden_menu_container">
 				<div class="link link_active"><a href="../main/index.html">About the shelter</a></div>
 				<div class="link"><a href="../pets/index.html" onclick="closeBurgerMenu()">Our pets</a></div>
@@ -41,6 +43,7 @@
 				<div class="link"><a href="#contacts" onclick="closeBurgerMenu()">Contacts</a></div>
 				</div>
 			</nav>
+			
 			</header>
 			<div class="start_screen_content">
 				<div class="start_screen_content_content">
@@ -85,41 +88,9 @@
 					are looking for a house</h3>
 				</div>
 				<div class="pets_items_container">
-					<div class="pets_arrow pets_arrow_left"></div>
-					<div class="pets_card">
-						<div class="card_image">
-
-						</div>
-						<div class="card_name">
-							Katrine
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Jennifer
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_card">
-						<div class="card_image">
-							
-						</div>
-						<div class="card_name">
-							Woody
-						</div>
-						<div class="card_button">
-							Learn more
-						</div>
-					</div>
-					<div class="pets_arrow pets_arrow_right"></div>
+					<div class="pets_arrow pets_arrow_left" id="start_arrow" onclick="slide()"></div>
+					
+					<div class="pets_arrow pets_arrow_right" onclick="slide()"></div>
 				</div>
 				<div class="pets_button">
 					<a href="../pets/index.html">Get to know the rest</a>
@@ -258,6 +229,40 @@
 				<div class="footer_image"></div>
 			</div>
 		</footer>
+	</div>
+	<div class="popup" id="popup">
+		<a onclick="closePopup()" class="popup_area"></a>
+		<div class="popup_container">
+			<div class="popup_content">
+				<a onclick="closePopup()">
+				<div class="popup_close_button"></div>
+				</a>
+				
+				<div class="popup_info"> 
+					<div class="popup_image" id="popup_image"></div>
+					<div class="popup_text">
+						<div class="popup_pet_name" id="popup_pet_name">
+							
+						</div>
+						<div class="popup_pet_type" id="popup_pet_type">
+							<h4>Dog - Labrador</h4>
+						</div>
+						<div class="popup_pet_description" id='popup_pet_description'>
+							
+						</div>
+						<div class="popup_pet_list" id="popup_pet_list">
+							<ul>
+								<li><b>Age</b>: 2 months</li>
+								<li><b>Inoculations</b>: none</li>
+								<li><b>Diseases</b>: none</li>
+								<li><b>Parasites</b>: none</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </body>
 </html>
