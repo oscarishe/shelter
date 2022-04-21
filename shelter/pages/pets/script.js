@@ -167,19 +167,19 @@ const minus = () => {
     let currentIterator = (currentPage*8)-1;
     let limit = currentIterator-7;
     for(let i=currentIterator;i>=limit;i--)
-            start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+            start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
   }
   if (window.innerWidth<1280 && window.innerWidth>=768) {
     let currentIterator = (currentPage*6)-1;
     let limit = currentIterator-5;
     for(let i=currentIterator;i>=limit;i--)
-            start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+            start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
   }
   if (window.innerWidth<768) {
               let currentIterator = (currentPage*3)-1;
               let limit = currentIterator-2;
               for(let i=currentIterator;i>=limit;i--)
-              start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+              start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
   }
 	document.getElementById('paginator').innerHTML = currentPage;
 	document.getElementById('button_plus').disabled=false;
@@ -199,19 +199,19 @@ const plus = () => {
           let currentIterator = (currentPage*8)+7;
           let limit = currentIterator-7;
           for(let i=currentIterator;i>=limit;i--)
-          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
 	}
   if(window.innerWidth<1280 && window.innerWidth>=768) {
           let currentIterator = (currentPage*6)+5;
           let limit = currentIterator-5;
           for(let i=currentIterator;i>=limit;i--)
-          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
   }
   if (window.innerWidth<768) {
           let currentIterator = (currentPage*3)+2;
           let limit = currentIterator-2;
           for(let i=currentIterator;i>=limit;i--)
-          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+          start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
   }
   if(currentPage>=1) {
 		document.getElementById('button_minus').disabled=false;
@@ -228,7 +228,7 @@ const minPage = () => {
   let start = document.getElementById('pets_items_container');
   document.querySelectorAll(".pets_card").forEach(el => el.remove());
   for(let i=7;i>=0;i--)
-    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name + i}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
+    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
 	document.getElementById('paginator').innerHTML = 1;
 	document.getElementById('button_minus').disabled=true;
 	document.getElementById('button_min').disabled=true;
@@ -240,19 +240,19 @@ const maxPage = () => {
   if(window.innerWidth>=1280) {
     document.querySelectorAll(".pets_card").forEach(el => el.remove());
     for(let i=47;i>=40;i--)
-    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
     document.getElementById('paginator').innerHTML = 6;
   }
   if (window.innerWidth<1280 && window.innerWidth>=768) {
     document.querySelectorAll(".pets_card").forEach(el => el.remove());
     for(let i=47;i>=42;i--)
-    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
     document.getElementById('paginator').innerHTML = 8;
   }
   if (window.innerWidth<768) {
     document.querySelectorAll(".pets_card").forEach(el => el.remove());
     for(let i=47;i>=45;i--)
-    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name + i}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
     document.getElementById('paginator').innerHTML = 16;
   }
 	document.getElementById('button_plus').disabled=true;
@@ -272,7 +272,7 @@ window.onload = function() {
 let start = document.getElementById('pets_items_container');
 
 for(let i=7;i>=0;i--)
-start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name + i}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
+start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
     if(burger.className=="burger_hidden") {
@@ -298,6 +298,7 @@ burger.addEventListener("click", function(){
 }
 const popup = (petName) => {
   let popup = document.getElementById('popup');
+  document.querySelector('header').style.zIndex=-1;
   popup.style.visibility = "visible";
   popup.style.opacity = 1;
   let pet = pets.find(obj => obj.name == petName);
@@ -318,6 +319,7 @@ const closePopup = () => {
   popup.style.visibility = "hidden";
   popup.style.opacity = 0;
   document.querySelector('body').style.overflow = "visible";
+  document.querySelector('header').style.zIndex=1;
 }
 window.addEventListener('resize', function(event){
   const mediaQuery = window.matchMedia('(min-width: 768px)')
