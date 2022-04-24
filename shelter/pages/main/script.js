@@ -226,7 +226,7 @@ const closePopup = () => {
 
 window.addEventListener('resize', function(event){
   const mediaQuery = window.matchMedia('(min-width: 768px)')
-  if (mediaQuery.matches) {
+  if (mediaQuery.matches && document.getElementsByClassName('hidden_menu')[0].style.visibility == "visible") {
     closeBurgerMenu();
 }
 });

@@ -149,10 +149,10 @@ const randomArrayGenerator = () => {
   }
   return arr;
 }
-var sliderPets = pets.slice();
+var sliderPets = [];
 console.log(sliderPets);
 let randomArray = []
-for(let i=0;i<5;i++)  {
+for(let i=0;i<6;i++)  {
     randomArray.push(randomArrayGenerator());
     for(let j=0;j<randomArray[i].length;j++)
       sliderPets.push(pets[randomArray[i][j]]);
@@ -228,7 +228,7 @@ const minPage = () => {
   let start = document.getElementById('pets_items_container');
   document.querySelectorAll(".pets_card").forEach(el => el.remove());
   for(let i=7;i>=0;i--)
-    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
+    start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
 	document.getElementById('paginator').innerHTML = 1;
 	document.getElementById('button_minus').disabled=true;
 	document.getElementById('button_min').disabled=true;
@@ -272,7 +272,7 @@ window.onload = function() {
 let start = document.getElementById('pets_items_container');
 
 for(let i=7;i>=0;i--)
-start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`);
+start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
     if(burger.className=="burger_hidden") {
@@ -323,7 +323,7 @@ const closePopup = () => {
 }
 window.addEventListener('resize', function(event){
   const mediaQuery = window.matchMedia('(min-width: 768px)')
-  if (mediaQuery.matches) {
+  if (mediaQuery.matches && document.getElementsByClassName('hidden_menu')[0].style.visibility == "visible") {
     closeBurgerMenu();
 }
 });

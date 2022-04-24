@@ -430,7 +430,7 @@ nav {
 	transition: 0.5s;
 }
 .pets_card:hover .card_button {
-	background: #F1CDB3;
+	background: #FDDCC4;
 }
 .help {
 	background: white;
@@ -656,8 +656,7 @@ footer h4 {
 	z-index: 3;
 }
 .popup_info {
-	top: 50%;
-	left: 50%;
+	margin: 0 auto 0 auto;
 	border-radius: 9px;
 	display: flex;
 	width: 900px;
@@ -725,7 +724,7 @@ footer h4 {
 	border: 2px solid #F1CDB3;
 	box-sizing: border-box;
 	border-radius: 100px;
-	margin-left: 93.5%;
+	margin-left: 96%;
 	top: 0;
 	right: 0;
 }
@@ -929,7 +928,7 @@ footer h4 {
 		border: 2px solid #F1CDB3;
 		box-sizing: border-box;
 		border-radius: 100px;
-		margin-left: 91%;
+		margin-left: 95%;
 		top: 0;
 		right: 0;
 	}
@@ -1263,7 +1262,7 @@ footer h4 {
 		border: 2px solid #F1CDB3;
 		box-sizing: border-box;
 		border-radius: 100px;
-		margin-left: 80%;
+		margin-left: 86%;
 		top: 0;
 		right: 0;
 	}

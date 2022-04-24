@@ -415,7 +415,7 @@ footer h4 {
 }
 .popup_info {
 	top: 50%;
-	left: 50%;
+	margin: 0 auto 0 auto;
 	border-radius: 9px;
 	display: flex;
 	width: 900px;
@@ -483,7 +483,7 @@ footer h4 {
 	border: 2px solid #F1CDB3;
 	box-sizing: border-box;
 	border-radius: 100px;
-	margin-left: 93.5%;
+	margin-left: 96%;
 	top: 0;
 	right: 0;
 }
@@ -503,6 +503,9 @@ footer h4 {
 	margin-left: 30px;
 	width: 351px;
 	height: 362px;
+}
+.popup_close_button:hover {
+	background-color: #FDDCC4;
 }
 @media (max-width: 1279px) {
 	header {
@@ -608,7 +611,7 @@ footer h4 {
 		border: 2px solid #F1CDB3;
 		box-sizing: border-box;
 		border-radius: 100px;
-		margin-left: 91%;
+		margin-left: 95%;
 		top: 0;
 		right: 0;
 	}
@@ -770,6 +773,7 @@ footer h4 {
 	.popup_pet_list ul {
 		padding-left: 15px;
 		list-style-image: url(../../assets/images/dot.png);
+		margin-bottom: 0px;
 	}
 	.popup_pet_list ul li {
 		vertical-align: middle;
@@ -781,6 +785,7 @@ footer h4 {
 		letter-spacing: 0.06em;
 		margin-bottom: 7px;
 	}
+
 	.popup_image {
 		display: none;
 	}
@@ -790,7 +795,7 @@ footer h4 {
 		border: 2px solid #F1CDB3;
 		box-sizing: border-box;
 		border-radius: 100px;
-		margin-left: 80%;
+		margin-left: 86%;
 		top: 0;
 		right: 0;
 	}
