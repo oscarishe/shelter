@@ -431,6 +431,7 @@ nav {
 }
 .pets_card:hover .card_button {
 	background: #FDDCC4;
+	border: 2px solid #FDDCC4;
 }
 .help {
 	background: white;
