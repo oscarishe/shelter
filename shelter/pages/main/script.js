@@ -151,8 +151,13 @@ const closeBurgerMenu =() => {
 }
 window.onload = function() {
 let start = document.getElementById('start_arrow');
+let arr = [];
+  while(arr.length < 3){
+      var r = Math.floor(Math.random() * (8)) + 0;
+      if(arr.indexOf(r) === -1) arr.push(r);
+  }
 for(let i=0;i<3;i++)
-start.insertAdjacentHTML('afterend', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[i].img})" ></div><div class="card_name">${pets[i].name}</div><div class="card_button" onclick="popup('${pets[i].name}')">Learn more</div></div>`) //katrine jennifer woody
+start.insertAdjacentHTML('afterend', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[arr[i]].img})" ></div><div class="card_name">${pets[arr[i]].name}</div><div class="card_button" onclick="popup('${pets[arr[i]].name}')">Learn more</div></div>`) //katrine jennifer woody
 
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
