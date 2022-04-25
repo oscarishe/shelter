@@ -746,6 +746,11 @@ footer h4 {
 	width: 351px;
 	height: 362px;
 }
+
+.popup_close_button:hover {
+	background-color: #FDDCC4;
+}
+
 @media (max-width: 1279px) {
 
 	header {
