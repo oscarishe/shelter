@@ -141,21 +141,24 @@ var pets = [
     ]
   }
 ]
-const randomArrayGenerator = () => {
+const randomArrayGenerator = (n) => {
   let arr = [];
-  while(arr.length < 8){
+  while(arr.length < n){
       var r = Math.floor(Math.random() * 8) + 0;
       if(arr.indexOf(r) === -1) arr.push(r);
   }
   return arr;
 }
 var sliderPets = [];
-console.log(sliderPets);
-let randomArray = []
+let randomArray = [];
 for(let i=0;i<6;i++)  {
-    randomArray.push(randomArrayGenerator());
+    randomArray.push(randomArrayGenerator(8));
     for(let j=0;j<randomArray[i].length;j++)
       sliderPets.push(pets[randomArray[i][j]]);
+}
+
+const generatePetsArray = (n) => {
+    return n;
 }
 
 const minus = () => {
@@ -269,10 +272,44 @@ const closeBurgerMenu =() => {
       document.querySelector('body').style.overflow = "visible";
 }
 window.onload = function() {
-let start = document.getElementById('pets_items_container');
-
-for(let i=7;i>=0;i--)
-start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+    let start = document.getElementById('pets_items_container');
+    if(window.innerWidth>=1280) {
+    sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<6;i++)  {
+          randomArray.push(randomArrayGenerator(8));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+  }
+  if(window.innerWidth<1280 && window.innerWidth>=768) {
+      sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<8;i++)  {
+          randomArray.push(randomArrayGenerator(6));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+ } 
+  if(window.innerWidth<768) {
+      sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<16;i++)  {
+          randomArray.push(randomArrayGenerator(3));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+}
+    console.log(sliderPets);
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
     if(burger.className=="burger_hidden") {
@@ -321,11 +358,58 @@ const closePopup = () => {
   document.querySelector('body').style.overflow = "visible";
   document.querySelector('header').style.zIndex=1;
 }
+var resizeId;
 window.addEventListener('resize', function(event){
-  const mediaQuery = window.matchMedia('(min-width: 768px)')
+  clearTimeout(resizeId);
+  resizeId = setTimeout(doneResizing, 500);
+  
+});
+function doneResizing() {
+  console.log("resizing " +innerWidth);
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+  if(window.innerWidth>=1280) {
+    sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<6;i++)  {
+          randomArray.push(randomArrayGenerator(8));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      let start = document.getElementById('pets_items_container');
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+  }
+
+  if(window.innerWidth<1280 && window.innerWidth>=768) {
+      sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<8;i++)  {
+          randomArray.push(randomArrayGenerator(6));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      let start = document.getElementById('pets_items_container');
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+ } 
+  if(window.innerWidth<768) {
+      sliderPets = [];
+      let randomArray = [];
+      for(let i=0;i<16;i++)  {
+          randomArray.push(randomArrayGenerator(3));
+            for(let j=0;j<randomArray[i].length;j++)
+              sliderPets.push(pets[randomArray[i][j]]);
+      }
+      let start = document.getElementById('pets_items_container');
+      document.querySelectorAll(".pets_card").forEach(el => el.remove());
+      for(let i=7;i>=0;i--)
+        start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
+
+  }
   if (mediaQuery.matches && document.getElementsByClassName('hidden_menu')[0].style.visibility == "visible") {
     closeBurgerMenu();
 }
-});
-
+}
 
