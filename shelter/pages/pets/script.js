@@ -309,7 +309,6 @@ window.onload = function() {
       for(let i=7;i>=0;i--)
         start.insertAdjacentHTML('afterbegin', `<div class="pets_card"><div class="card_image" style="background-image:url(${sliderPets[i].img})" ></div><div class="card_name">${sliderPets[i].name}</div><div class="card_button" onclick="popup('${sliderPets[i].name}')">Learn more</div></div>`);
 }
-    console.log(sliderPets);
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
     if(burger.className=="burger_hidden") {
