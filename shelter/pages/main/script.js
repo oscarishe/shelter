@@ -157,7 +157,7 @@ let arr = [];
       if(arr.indexOf(r) === -1) arr.push(r);
   }
 for(let i=0;i<3;i++)
-start.insertAdjacentHTML('afterend', `<div class="pets_card"><div class="card_image" style="background-image:url(${pets[arr[i]].img})" ></div><div class="card_name">${pets[arr[i]].name}</div><div class="card_button" onclick="popup('${pets[arr[i]].name}')">Learn more</div></div>`) //katrine jennifer woody
+start.insertAdjacentHTML('afterend', `<div class="pets_card" onclick="popup('${pets[arr[i]].name}')"><div class="card_image" style="background-image:url(${pets[arr[i]].img})" ></div><div class="card_name">${pets[arr[i]].name}</div><div class="card_button" >Learn more</div></div>`) //katrine jennifer woody
 
 var burger = document.getElementById('burger');
 burger.addEventListener("click", function(){
@@ -198,7 +198,7 @@ const slide = () => {
 	    if(arr.indexOf(r) === -1) arr.push(r);
 	}
 	for(let i=0;i<arr.length;i++) {
-			startArrow.insertAdjacentHTML('afterend', `<div class="pets_card"><div class="card_image" style="background-image:url(${newPets[arr[i]].img})" ></div><div class="card_name">${newPets[arr[i]].name}</div><div class="card_button" onclick="popup('${newPets[arr[i]].name}')">Learn more</div></div>`)
+			startArrow.insertAdjacentHTML('afterend', `<div class="pets_card" onclick="popup('${pets[arr[i]].name}')"><div class="card_image" style="background-image:url(${newPets[arr[i]].img})" ></div><div class="card_name">${newPets[arr[i]].name}</div><div class="card_button">Learn more</div></div>`)
 			n--;
 		
 		if(n==0)
