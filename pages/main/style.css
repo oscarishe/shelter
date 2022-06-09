@@ -35,7 +35,7 @@ header {
 	font-family: 'Georgia';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 31px;
+	font-size: 30px;
 	line-height: 35px;
 	display: flex;
 	align-items: flex-start;
@@ -45,7 +45,6 @@ header {
 }
 
 .logo_subtitle {
-	margin-left: 4px;
 	width: 181px;
 	height: 25px;
 	font-family: 'Arial';
