@@ -198,7 +198,7 @@ const slide = () => {
 	    if(arr.indexOf(r) === -1) arr.push(r);
 	}
 	for(let i=0;i<arr.length;i++) {
-			startArrow.insertAdjacentHTML('afterend', `<div class="pets_card" onclick="popup('${pets[arr[i]].name}')"><div class="card_image" style="background-image:url(${newPets[arr[i]].img})" ></div><div class="card_name">${newPets[arr[i]].name}</div><div class="card_button">Learn more</div></div>`)
+			startArrow.insertAdjacentHTML('afterend', `<div class="pets_card" onclick="popup('${newPets[arr[i]].name}')"><div class="card_image" style="background-image:url(${newPets[arr[i]].img})" ></div><div class="card_name">${newPets[arr[i]].name}</div><div class="card_button">Learn more</div></div>`)
 			n--;
 		
 		if(n==0)
